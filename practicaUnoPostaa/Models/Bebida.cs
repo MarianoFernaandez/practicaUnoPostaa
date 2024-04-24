@@ -10,7 +10,28 @@ namespace practicaUno.Models
     {
         public string nombre { get; set; }
         public int cantidad { get; set; }
+        
+        public string GetNombre()
+        {
+            return nombre;
+        }
 
+        public void SetNombre(string nombre)
+        {
+            this.nombre = nombre;
+            this.cantidad = cantidad;
+        }
+
+        public int GetCantidad()
+        {
+            return cantidad;
+        }
+
+        public void SetCantidad(int cantidad)
+        {
+            this.cantidad = cantidad;
+            this.nombre = nombre;
+        }
         public Bebida(string nombre, int cantidad)
         {
             this.nombre = nombre;
@@ -21,5 +42,11 @@ namespace practicaUno.Models
         {
             this.cantidad -= cuantoBebio;
         }
+
+        public Bebida()
+        {
+
+        }
+            
     }
 }
