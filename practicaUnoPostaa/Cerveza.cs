@@ -7,18 +7,23 @@ using System.Threading.Tasks;
 
 namespace practicaUnoPostaa
 {
-    internal class Vino : Bebida , IBebidaAlcoholica
+    internal class Cerveza : Bebida, IBebidaAlcoholica
     {
-        public Vino(int Cantidad, string Nombre = "Vino")
+        public Cerveza()
+        {
+
+        }
+        public Cerveza(int Cantidad, string Nombre = "Cerveza")
             : base(Nombre, Cantidad)
         {
 
         }
-        public int alcohol { get ; set ; }
+        public int alcohol { get; set; }
 
         public void maxRecomendado()
         {
-            Console.WriteLine("El maximo permitido de vino es de dos botellas por persona");
+            Console.WriteLine("El maximo permitido de cerveza es de seis latas por persona");
         }
     }
 }
+
